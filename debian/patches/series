@@ -1,2 +1,4 @@
 01_init_script_additions.patch
 02_manpage_additions.patch
+03_fix-buffer-overrun_when_logging_keys.patch
+04_CVE-2011-4971.patch

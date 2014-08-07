@@ -1,3 +1,15 @@
+memcached (1.4.5-1+deb6u1) squeeze-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Add 03_fix-buffer-overrun_when_logging_keys.patch patch.
+    CVE-2013-0179: DoS due to buffer overrun when printing out keys to be
+    deleted in verbose mode. (Closes: #698231)
+  * Add 04_CVE-2011-4971.patch.
+    CVE-2011-4971: Fix remote denial of service. Sending a specially crafted
+    packet cause memcached to segfault. (Closes: #706426)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 31 Dec 2013 08:25:46 +0100
+
 memcached (1.4.5-1) unstable; urgency=high
 
   * New upstream release.  Main changes since 1.4.2 are:
