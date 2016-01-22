@@ -1,0 +1,46 @@
+Description: [CVE-2013-0179] Fix buffer-overrun when logging keys
+Origin: vendor
+Bug: https://code.google.com/p/memcached/issues/detail?id=306
+Bug-Debian: http://bugs.debian.org/698231
+Forwarded: not-needed
+Author: Jeremy Sowden <jeremy.sowden@gmail.com>
+Author: Salvatore Bonaccorso <carnil@debian.org>
+Last-Update: 2013-01-22
+--- a/memcached.c
++++ b/memcached.c
+@@ -2149,7 +2149,12 @@
+     assert(c != NULL);
+ 
+     if (settings.verbose > 1) {
+-        fprintf(stderr, "Deleting %s\n", key);
++        int ii;
++        fprintf(stderr, "Deleting ");
++        for (ii = 0; ii < nkey; ++ii) {
++            fprintf(stderr, "%c", key[ii]);
++        }
++        fprintf(stderr, "\n");
+     }
+ 
+     if (settings.detail_enabled) {
+--- a/items.c
++++ b/items.c
+@@ -500,9 +500,17 @@
+ 
+     if (settings.verbose > 2) {
+         if (it == NULL) {
+-            fprintf(stderr, "> NOT FOUND %s", key);
++            int ii;
++            fprintf(stderr, "> NOT FOUND ");
++            for (ii = 0; ii < nkey; ++ii) {
++                fprintf(stderr, "%c", key[ii]);
++            }
+         } else {
+-            fprintf(stderr, "> FOUND KEY %s", ITEM_key(it));
++            int ii;
++            fprintf(stderr, "> FOUND KEY ");
++            for (ii = 0; ii < it->nkey; ++ii) {
++                fprintf(stderr, "%c", ITEM_key(it)[ii]);
++            }
+             was_found++;
+         }
+     }
