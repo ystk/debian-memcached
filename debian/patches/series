@@ -4,3 +4,4 @@
 04_add_init_retry.patch
 06_eol_comment_handling.patch
 07_disable_tests.patch
+08_CVE-2016-8704_CVE-2016-8705_CVE-2016-8706.patch
