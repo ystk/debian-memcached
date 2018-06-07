@@ -1,3 +1,15 @@
+memcached (1.4.21-1.1+deb8u2) jessie-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Heap-based buffer over-read in try_read_command function (CVE-2017-9951)
+    (Closes: #868701)
+  * disable UDP port by default (CVE-2018-1000115)
+  * debian/NEWS: Add explanation and document how to re-enable UDP if
+    necessary
+  * Don't overflow item refcount on get (CVE-2018-1000127) (Closes: #894404)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 03 Jun 2018 15:21:23 +0200
+
 memcached (1.4.21-1.1+deb8u1) jessie-security; urgency=high
 
   * Non-maintainer upload by the Security Team.

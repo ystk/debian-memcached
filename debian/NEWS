@@ -1,3 +1,11 @@
+memcached (1.4.21-1.1+deb8u2) jessie-security; urgency=high
+
+  * memcached is now configured to disable its UDP port by default, to
+    prevent its use as a DDoS amplifier. To re-enable UDP service, add
+    '-U 11211' to /etc/memcached.conf and restart the memcached service.
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 03 Jun 2018 12:16:35 +0200
+
 memcached (1.4.20-1) unstable; urgency=medium
 
     Starting with this release, a system user "memcache" will be created.
