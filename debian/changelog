@@ -1,3 +1,12 @@
+memcached (1.4.21-1.1+deb8u3) jessie-security; urgency=high
+
+  * CVE-2019-15026: Prevent a stack-based buffer over-read in conn_to_str.
+    (Closes: #939337)
+  * Add debian/gbp.conf.
+  * Update Vcs-Browser and Vcs-Git.
+
+ -- Chris Lamb <lamby@debian.org>  Fri, 06 Sep 2019 21:42:52 +0100
+
 memcached (1.4.21-1.1+deb8u2) jessie-security; urgency=high
 
   * Non-maintainer upload by the Security Team.

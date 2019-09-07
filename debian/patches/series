@@ -8,3 +8,4 @@
 09_CVE-2017-9951.patch
 10_CVE-2018-1000115-disable-UDP-port-by-default.patch
 11_CVE-2018-1000127-Don-t-overflow-item-refcount-on-get.patch
+CVE-2019-15026.patch
