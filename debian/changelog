@@ -1,3 +1,13 @@
+memcached (1.4.21-1.1+deb8u4) jessie-security; urgency=high
+
+  * Non-maintainer upload by the ELTS Security Team.
+  * CVE-2022-48571: Prevent a potential Denial of Service (DoS) attack that
+    could have been caused by a crash when handling multi-packet uploads in UDP
+    mode. Deployments of memcached that only use TCP are likely unaffected by
+    this issue.
+
+ -- Chris Lamb <lamby@debian.org>  Thu, 07 Sep 2023 11:43:40 -0700
+
 memcached (1.4.21-1.1+deb8u3) jessie-security; urgency=high
 
   * CVE-2019-15026: Prevent a stack-based buffer over-read in conn_to_str.
